@@ -6,9 +6,15 @@ class Application extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+   
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.dark,
+      theme: ThemeData(
+    colorScheme: ColorScheme.fromSwatch().copyWith(
+      primary:const  Color.fromARGB(255, 134, 194, 255),
+      secondary: const Color.fromARGB(255, 25, 228, 255),
+    )
+    ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text("My profile"),
